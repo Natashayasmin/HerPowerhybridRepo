@@ -1,0 +1,49 @@
+//Seller
+ExpectedFailedValue=Login Failed
+
+//Home See all
+ExpectedTextValue=Latest News
+
+//Search products
+SearchProductName1=Nose pin
+
+//ResourceLibrary
+ExpectedTextValue1=Articles
+
+//CareerAndPlacement
+ExpectedTextValue2=Jobs for you
+
+//Event
+ExpectedEvent=Events
+
+//Success Story
+ExpectedTextValue3=Success Stories
+
+//Challenges
+ExpectedTextValue4=Challenges
+
+//ShopNow
+ExpectedTextValue5=Find Our Latest Collection Here
+
+
+//LoginPage
+ExpectedTextValue6=Enter your credentials to access your account
+
+//View all Products
+ProductNameUpdate=Delux1
+
+//SignUp page
+
+ImageFile=D:\\Work\\Screenshots\\2023-12-31_721979.jpg
+FirstNameText= Huawei
+LastNameText=Phone
+PhoneNumber=0181144772
+Email=Qa@gmail.com
+Username=SwagTester
+NID=9876543211
+Address=Gopalganj
+Area=Gopalganj
+City=Gopalganj
+ZipCode=12125
+Password=1234567
+ConfirmPassword=1234567

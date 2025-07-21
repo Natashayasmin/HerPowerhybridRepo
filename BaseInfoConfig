@@ -1,0 +1,18 @@
+url=http://192.168.0.3:4021/en
+
+validPassword =123456
+
+invalidPassword =1234566
+
+//Seller
+validEmailforSeller=natashay580@gmail.com
+
+/Admin
+validEmailForAdmin=minhajurrohoman9016@gmail.com
+
+//Customer
+validEmailForCustomer=atiltdqa1998@gmail.com
+
+//Browser
+ChromeBrowser=chrome
+EdgeBrowser=edge
