@@ -1,7 +1,9 @@
 package TestCaseForSellerPage;
 
+import java.io.File;
 import java.time.Duration;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -181,8 +183,7 @@ public class TestCaseForProfileIconPage extends BaseClassOne  {
 	public void shouldEditAndUpdateProductName() {
 	    String ProductNameUpdate = "Delux1";
 
-	    // Navigate and perform product update
-	    ProfileIconPage updatedPage = profileiconpage.navigateToeditAndUpdateProd(ProductNameUpdate);
+	    profileiconpage.navigateToeditAndUpdateProd(ProductNameUpdate);
 
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
@@ -198,4 +199,70 @@ public class TestCaseForProfileIconPage extends BaseClassOne  {
 
 	    System.out.println(" Product Updated successfully: " + ProductNameUpdate);
 	}
-}
+	
+//	@Test(priority = 11)
+//	public void shouldAddNewProductPage()  {
+//		
+//	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+//	    
+//
+//
+//	    profileiconpage.verifyaddNewProducts(
+//	        DataPropForHerPower.getProperty("productName"),
+//	        DataPropForHerPower.getProperty("brandModel"),
+//	        DataPropForHerPower.getProperty("brandName"),
+//	       // DataPropForHerPower.getProperty("categoryName"),
+//	      //  DataPropForHerPower.getProperty("descField"),
+//	        DataPropForHerPower.getProperty("imageFile"),        // Full local path required
+//	        DataPropForHerPower.getProperty("variantName"),
+//	        DataPropForHerPower.getProperty("oldPrice"),
+//	        DataPropForHerPower.getProperty("newPrice"),
+//	            
+//	        
+//	        DataPropForHerPower.getProperty("stockCount"),
+//	        DataPropForHerPower.getProperty("descfield2"), null
+//	        
+//	    );
+//	    
+//	    String expectedOption = "Footwear";
+//		System.out.println("Selecting '" + expectedOption + "' from the Category ");
+//
+//	    String expectedFragment = "/shop-now/seller/dashboard/add-product";
+//
+//	    try {
+//	        // Try redirect verification
+//	        wait.until(ExpectedConditions.urlContains(expectedFragment));
+//	        String actualUrl = driver.getCurrentUrl();
+//	        Assert.assertTrue(actualUrl.contains(expectedFragment),
+//	            "❌ Redirect failed. Landed on unexpected URL: " + actualUrl);
+//	        System.out.println("✅ Redirected to dashboard after publishing: " + actualUrl);
+//
+//	    } catch (TimeoutException e) {
+//	        // If redirect fails, check for success toast or UI confirmation
+//	        try {
+//	            WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
+//	                By.xpath("//*[contains(text(), 'Product added')]")
+//	            ));
+//	            Assert.assertTrue(successToast.isDisplayed(), "❌ Success toast not visible.");
+//	            System.out.println("✅ Product added successfully. Toast message displayed.");
+//	        } catch (TimeoutException toastFail) {
+//	            throw new AssertionError("❌ Neither dashboard redirect nor success message detected. Product publish may have failed.");
+//	        }
+//	        
+//	    }
+//	        }
+	
+	@Test(priority =12)
+	public void shouldNavigateToaddProductwithoutdataSection() {
+		profileiconpage.verifyaddNewProducts();
+		new WebDriverWait(driver, Duration.ofSeconds(20))
+		.until(ExpectedConditions.urlContains("/shop-now/seller/dashboard"));
+
+		Assert.assertTrue(driver.getCurrentUrl().contains("/shop-now/seller/dashboard"), 
+				"Did not navigate to Home Page > ProfileIcon page");
+	}
+	    }
+	
+	    
+	
+

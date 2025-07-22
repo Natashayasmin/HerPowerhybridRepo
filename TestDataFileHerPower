@@ -32,6 +32,21 @@ ExpectedTextValue6=Enter your credentials to access your account
 //View all Products
 ProductNameUpdate=Delux1
 
+//Add New Product
+
+productName=Shoe
+brandModel=Nike01
+brandName=Nike
+description=Testing
+imageFile=D:\\Work\\Screenshots\\2023-12-31_721979.jpg
+variantName=Nikee
+oldPrice=250
+newPrice=550
+stockCount=1000
+descfield2=Testing2
+//categoryName=Footwear
+
+
 //SignUp page
 
 ImageFile=D:\\Work\\Screenshots\\2023-12-31_721979.jpg
