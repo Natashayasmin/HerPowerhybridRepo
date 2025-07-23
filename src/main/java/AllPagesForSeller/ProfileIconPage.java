@@ -2,9 +2,7 @@ package AllPagesForSeller;
 
 import java.time.Duration;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.ListDocument.List;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
@@ -138,7 +136,7 @@ private WebElement productNameNewField;
 
 		wait.until(ExpectedConditions.urlContains("/shop-now/seller/dashboard"));
 
-		return new ProfileIconPage(driver);
+		return this;
 	}
 
 	// Select option
@@ -151,7 +149,7 @@ private WebElement productNameNewField;
 		Select select = new Select(wait.until(ExpectedConditions.visibilityOf(DropdownMenu)));
 		select.selectByVisibleText(allentries);
 
-		return new ProfileIconPage(driver);
+		return this;
 	}
 
 	public String getSelectedDropdownOptionText() {
@@ -165,6 +163,7 @@ private WebElement productNameNewField;
 
 
 	public ProfileIconPage goToPageNumber(int pageNumber) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.elementToBeClickable(profileIconbtn)).click();
 		WebElement GoToPage = new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.elementToBeClickable(
@@ -175,7 +174,7 @@ private WebElement productNameNewField;
 		GoToPage.sendKeys(String.valueOf(2));
 		GoToPage.sendKeys(Keys.ENTER);
 
-		return new ProfileIconPage(driver);
+		return this;
 	}
 
 	public String navigateTosearchText() {
@@ -248,7 +247,7 @@ private WebElement productNameNewField;
 		return new ProfileIconPage(driver);
 	}
 
-	public boolean isImageFieldVisible() {
+	public boolean isImageFielNamedVisible() {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 			WebElement imageLabel = wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -297,65 +296,73 @@ private WebElement productNameNewField;
 		wait.until(ExpectedConditions.elementToBeClickable(updateProduct)).click();
 
 		// Return the updated page object
-		return new ProfileIconPage(driver);
+		return this;
 	}
 
-//	public ProfileIconPage verifyaddNewProducts(
-//		    String productName,
-//		    String brandModel,
-//		    String brandName,
-//		    //String descFieldName,
-//		    String imageFile,
-//		    String variantName,
-//		    String oldPrice,
-//		    String newPrice,
-//		    String categoryName,
-//		    String Footwear,
-//		    String stockCount,
-//		    String descfield2
-//		)  {
-//		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	public ProfileIconPage verifyaddNewProductsformfillup(
+		    String productName,
+		    String brandModel,
+		    String brandName,
+		    String description,
+		    String imageFile,
+		    String variantName,
+		    String oldPrice,
+		    String newPrice,
+		 //   String categoryName,
+		    String stockCount,
+		    String descfield2
+		) {
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		    // Navigate to "Add New Product"
+		    wait.until(ExpectedConditions.elementToBeClickable(profileIconbtn)).click();
+		    wait.until(ExpectedConditions.elementToBeClickable(addNewProductbtn)).click();
+
+		    // Fill product details
+		    wait.until(ExpectedConditions.visibilityOf(productNameNewField)).sendKeys(productName);
+		    brandModelField.sendKeys(brandModel);
+		    brandNameField.sendKeys(brandName);
+
+//		    // --- CUSTOM DROPDOWN HANDLING START ---
+//		    // 1. Open the dropdown
+//		    WebElement dropdownButton = wait.until(ExpectedConditions.elementToBeClickable(
+//		        By.xpath("//button[contains(@class,'h-10') and .//span[text()='Product Category']]")
+//		    ));
+//		    dropdownButton.click();
 //
-//		    wait.until(ExpectedConditions.elementToBeClickable(profileIconbtn)).click();
-//		    wait.until(ExpectedConditions.elementToBeClickable(addNewProductbtn)).click();
+//		    // 2. Wait for dropdown options to be visible
+//		    wait.until(ExpectedConditions.visibilityOfElementLocated(
+//		        By.xpath("//ul[contains(@class,'absolute') and contains(@class,'z-')]")
+//		    ));
 //
-//		    wait.until(ExpectedConditions.visibilityOf(productNameNewField)).sendKeys(productName);
-//		    brandModelField.sendKeys(brandModel);
-//		    brandNameField.sendKeys(brandName);
+//		    // 3. Select the option dynamically
+//		    By optionLocator = By.xpath("//li[normalize-space(text())='" + categoryName + "']");
+//		    WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(optionLocator));
+//		    js.executeScript("arguments[0].scrollIntoView(true);", option);
+//		    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
 //
-//		   
-////		 // Step 1: Click the dropdown to open options
-////		    wait.until(ExpectedConditions.elementToBeClickable(productCategory)).click(); 
-////		    Thread.sleep(2000);
-////
-////		    // Step 2: Locate the desired option
-////		    By optionLocator = By.xpath("//li[normalize-space(text())='Footwear']");
-////
-////		    // Step 3: Wait for the option to be visible
-////		    WebElement footwearOption = wait.until(ExpectedConditions.visibilityOfElementLocated(optionLocator));
-////
-////		    // Step 4: Optional: Scroll into view if needed
-////		    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", footwearOption);
-////
-////		    // Step 5: Click to select
-////		    wait.until(ExpectedConditions.elementToBeClickable(footwearOption)).click();
-//		    // Continue filling the rest of the form
-//		   // descFieldName.sendKeys(description);
-//		    uploadLabel.click();
-//		    fileInput.sendKeys(imageFile);
-//		    variant1Field.sendKeys(variantName);
-//		    oldPriceField.sendKeys(oldPrice);
-//		    newPriceField.sendKeys(newPrice);
-//		    stockField.sendKeys(stockCount);
-//		    descField2.sendKeys(descfield2);
-//
-//		wait.until(ExpectedConditions.visibilityOf(publishBtn));
-//	wait.until(ExpectedConditions.elementToBeClickable(publishBtn)).click();
-//
-//		wait.until(ExpectedConditions.urlContains("/shop-now/seller/dashboard/add-product"));
-//
-//		return new ProfileIconPage(driver);
-//	}
+//		    // --- CUSTOM DROPDOWN HANDLING END ---
+
+		    // Image upload
+		    uploadLabel.click();
+		    fileInput.sendKeys(imageFile);
+		    
+		    descFieldName.sendKeys(description);
+
+		    // Pricing and variant
+		    variant1Field.sendKeys(variantName);
+		    oldPriceField.sendKeys(oldPrice);
+		    newPriceField.sendKeys(newPrice);
+		    stockField.sendKeys(stockCount);
+		    descField2.sendKeys(descfield2);
+
+		    // Submit
+		    wait.until(ExpectedConditions.elementToBeClickable(publishBtn)).click();
+
+		    // Wait for success confirmation
+		    wait.until(ExpectedConditions.urlContains("/shop-now/seller/dashboard/add-product"));
+
+		    return this;
+		}
 	
 	public ProfileIconPage verifyaddNewProducts() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -365,17 +372,14 @@ private WebElement productNameNewField;
 		wait.until(ExpectedConditions.elementToBeClickable(publishBtn)).click();
 		wait.until(ExpectedConditions.urlContains("/shop-now/seller/dashboard/add-product"));
 		
-	    return new ProfileIconPage(driver);
+	    return this;
 		
 	}
 }
 
 
 
-//By categoryOption = By.xpath("//li[contains(normalize-space(.), '" + categoryName + "')]");
-//WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(categoryOption));
-//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", option);
-//wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+
 
 
 
