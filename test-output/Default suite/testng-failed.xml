@@ -5,9 +5,9 @@
     <classes>
       <class name="TestCaseForSellerPage.TestCaseForProfileIconPage">
         <methods>
-          <include name="shouldAddNewProductPage"/>
           <include name="browserSetup"/>
           <include name="teardown"/>
+          <include name="shouldNavigateToaddProductwithoutdataSection"/>
         </methods>
       </class> <!-- TestCaseForSellerPage.TestCaseForProfileIconPage -->
     </classes>

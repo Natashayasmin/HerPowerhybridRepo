@@ -8,7 +8,7 @@
     <classes>
       <class name="TestCaseForSellerPage.TestCaseForProfileIconPage">
         <methods>
-          <include name="shouldFailIfImageFieldMissing"/>
+          <include name="shouldFailIfImageFieldNameMissing"/>
           <include name="browserSetup"/>
           <include name="teardown"/>
         </methods>

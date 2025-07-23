@@ -1,32 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="12" total="13" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="46" passed="44" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-22T14:52:12 GMT+06:00" name="Default suite" finished-at="2025-07-22T14:52:35 GMT+06:00" duration-ms="22895">
+  <suite started-at="2025-07-23T16:13:11 GMT+06:00" name="Suite" finished-at="2025-07-23T16:22:37 GMT+06:00" duration-ms="565695">
     <groups>
     </groups>
-    <test started-at="2025-07-22T14:52:12 GMT+06:00" name="Default test" finished-at="2025-07-22T14:52:35 GMT+06:00" duration-ms="22895">
-      <class name="TestCaseForSellerPage.TestCaseForProfileIconPage">
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7d0b7e3c]" started-at="2025-07-22T14:52:12 GMT+06:00" name="browserSetup" finished-at="2025-07-22T14:52:23 GMT+06:00" duration-ms="10959" status="PASS">
+    <test started-at="2025-07-23T16:13:11 GMT+06:00" name="Test" finished-at="2025-07-23T16:22:37 GMT+06:00" duration-ms="565695">
+      <class name="TestCaseForSellerPage.TestCaseForSellerHomePage">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:15:49 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:15:55 GMT+06:00" duration-ms="6530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method signature="shouldAddNewProductPage()[pri:11, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7d0b7e3c]" started-at="2025-07-22T14:52:23 GMT+06:00" name="shouldAddNewProductPage" finished-at="2025-07-22T14:52:34 GMT+06:00" duration-ms="11617" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method signature="verifyNavigateToCategories()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:15:55 GMT+06:00" name="verifyNavigateToCategories" finished-at="2025-07-23T16:16:00 GMT+06:00" duration-ms="4630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToCategories -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:00 GMT+06:00" name="teardown" finished-at="2025-07-23T16:16:00 GMT+06:00" duration-ms="232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:00 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:16:09 GMT+06:00" duration-ms="8770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="verifyNavigateToExploreCoursePage()[pri:1, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:09 GMT+06:00" name="verifyNavigateToExploreCoursePage" finished-at="2025-07-23T16:16:13 GMT+06:00" duration-ms="3996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToExploreCoursePage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:13 GMT+06:00" name="teardown" finished-at="2025-07-23T16:16:13 GMT+06:00" duration-ms="370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:13 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:16:20 GMT+06:00" duration-ms="7036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="verifyNavigateToContactPage()[pri:2, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:20 GMT+06:00" name="verifyNavigateToContactPage" finished-at="2025-07-23T16:16:26 GMT+06:00" duration-ms="5814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToContactPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:26 GMT+06:00" name="teardown" finished-at="2025-07-23T16:16:26 GMT+06:00" duration-ms="232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:26 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:16:33 GMT+06:00" duration-ms="6691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="verifyNavigateToProfileIcon()[pri:3, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:33 GMT+06:00" name="verifyNavigateToProfileIcon" finished-at="2025-07-23T16:16:39 GMT+06:00" duration-ms="5445" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToProfileIcon -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:39 GMT+06:00" name="teardown" finished-at="2025-07-23T16:16:39 GMT+06:00" duration-ms="402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:39 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:16:46 GMT+06:00" duration-ms="7224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="verifyNavigateToShopNowPage()[pri:4, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:46 GMT+06:00" name="verifyNavigateToShopNowPage" finished-at="2025-07-23T16:16:52 GMT+06:00" duration-ms="5340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToShopNowPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForSellerHomePage@496bc455]" started-at="2025-07-23T16:16:52 GMT+06:00" name="teardown" finished-at="2025-07-23T16:16:52 GMT+06:00" duration-ms="375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCaseForSellerPage.TestCaseForSellerHomePage -->
+      <class name="TestCaseForSellerPage.TestCaseForShopNowPage">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:16:52 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:17:00 GMT+06:00" duration-ms="7878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToNewProductSeeAllSection()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:00 GMT+06:00" name="shouldNavigateToNewProductSeeAllSection" finished-at="2025-07-23T16:17:07 GMT+06:00" duration-ms="6822" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToNewProductSeeAllSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:07 GMT+06:00" name="teardown" finished-at="2025-07-23T16:17:07 GMT+06:00" duration-ms="267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:07 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:17:15 GMT+06:00" duration-ms="8073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToPopularProductSeeAllSection()[pri:1, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:15 GMT+06:00" name="shouldNavigateToPopularProductSeeAllSection" finished-at="2025-07-23T16:17:22 GMT+06:00" duration-ms="6639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToPopularProductSeeAllSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:22 GMT+06:00" name="teardown" finished-at="2025-07-23T16:17:22 GMT+06:00" duration-ms="302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:22 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:17:28 GMT+06:00" duration-ms="6263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToexploreByCategoriesSeeAllSection()[pri:2, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:28 GMT+06:00" name="shouldNavigateToexploreByCategoriesSeeAllSection" finished-at="2025-07-23T16:17:37 GMT+06:00" duration-ms="8869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToexploreByCategoriesSeeAllSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:37 GMT+06:00" name="teardown" finished-at="2025-07-23T16:17:37 GMT+06:00" duration-ms="300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:37 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:17:45 GMT+06:00" duration-ms="8137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToshopNowCategoriesSeeAllSection()[pri:3, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:45 GMT+06:00" name="shouldNavigateToshopNowCategoriesSeeAllSection" finished-at="2025-07-23T16:17:51 GMT+06:00" duration-ms="5866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToshopNowCategoriesSeeAllSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:51 GMT+06:00" name="teardown" finished-at="2025-07-23T16:17:52 GMT+06:00" duration-ms="293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:52 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:17:59 GMT+06:00" duration-ms="6960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToshopNowallProducstSection()[pri:4, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:17:59 GMT+06:00" name="shouldNavigateToshopNowallProducstSection" finished-at="2025-07-23T16:18:07 GMT+06:00" duration-ms="8155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToshopNowallProducstSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:18:07 GMT+06:00" name="teardown" finished-at="2025-07-23T16:18:07 GMT+06:00" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:18:07 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:18:13 GMT+06:00" duration-ms="6216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateTonextPageallProducstSection()[pri:5, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:18:13 GMT+06:00" name="shouldNavigateTonextPageallProducstSection" finished-at="2025-07-23T16:18:22 GMT+06:00" duration-ms="8940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateTonextPageallProducstSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:18:22 GMT+06:00" name="teardown" finished-at="2025-07-23T16:18:22 GMT+06:00" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:18:22 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:18:29 GMT+06:00" duration-ms="6337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateTosearchOptionSection()[pri:6, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:18:29 GMT+06:00" name="shouldNavigateTosearchOptionSection" finished-at="2025-07-23T16:18:38 GMT+06:00" duration-ms="9491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateTosearchOptionSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForShopNowPage@59402b8f]" started-at="2025-07-23T16:18:38 GMT+06:00" name="teardown" finished-at="2025-07-23T16:18:39 GMT+06:00" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCaseForSellerPage.TestCaseForShopNowPage -->
+      <class name="TestCaseForCommonPage.TestCaseForLoginPage">
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:12 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:15:17 GMT+06:00" duration-ms="4585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToSignUpPage()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:17 GMT+06:00" name="verifyNavigateToSignUpPage" finished-at="2025-07-23T16:15:19 GMT+06:00" duration-ms="1909" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToSignUpPage -->
+        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:19 GMT+06:00" name="tearDownBrowser" finished-at="2025-07-23T16:15:19 GMT+06:00" duration-ms="522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:19 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:15:24 GMT+06:00" duration-ms="4590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifySellerLoginWithValidCredential()[pri:1, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:24 GMT+06:00" name="verifySellerLoginWithValidCredential" finished-at="2025-07-23T16:15:26 GMT+06:00" duration-ms="1748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySellerLoginWithValidCredential -->
+        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:26 GMT+06:00" name="tearDownBrowser" finished-at="2025-07-23T16:15:26 GMT+06:00" duration-ms="344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:26 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:15:31 GMT+06:00" duration-ms="5078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifySellerLoginWithInvalidCredential()[pri:2, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:31 GMT+06:00" name="verifySellerLoginWithInvalidCredential" finished-at="2025-07-23T16:15:34 GMT+06:00" duration-ms="3385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySellerLoginWithInvalidCredential -->
+        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:34 GMT+06:00" name="tearDownBrowser" finished-at="2025-07-23T16:15:35 GMT+06:00" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:35 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:15:39 GMT+06:00" duration-ms="4522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyCustomerLoginWithValidCredential()[pri:3, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:39 GMT+06:00" name="verifyCustomerLoginWithValidCredential" finished-at="2025-07-23T16:15:42 GMT+06:00" duration-ms="2257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerLoginWithValidCredential -->
+        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:42 GMT+06:00" name="tearDownBrowser" finished-at="2025-07-23T16:15:42 GMT+06:00" duration-ms="617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:42 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:15:47 GMT+06:00" duration-ms="4507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyAdminLoginWithValidCredential()[pri:4, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:47 GMT+06:00" name="verifyAdminLoginWithValidCredential" finished-at="2025-07-23T16:15:49 GMT+06:00" duration-ms="1744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAdminLoginWithValidCredential -->
+        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForLoginPage@70ed52de]" started-at="2025-07-23T16:15:49 GMT+06:00" name="tearDownBrowser" finished-at="2025-07-23T16:15:49 GMT+06:00" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+      </class> <!-- TestCaseForCommonPage.TestCaseForLoginPage -->
+      <class name="TestCaseForSellerPage.TestCaseForProfileIconPage">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:18:39 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:18:45 GMT+06:00" duration-ms="6223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToprofileIconSection()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:18:45 GMT+06:00" name="shouldNavigateToprofileIconSection" finished-at="2025-07-23T16:18:53 GMT+06:00" duration-ms="8389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToprofileIconSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:18:53 GMT+06:00" name="teardown" finished-at="2025-07-23T16:18:53 GMT+06:00" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:18:53 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:19:00 GMT+06:00" duration-ms="6482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToorderListNextPageSection()[pri:1, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:00 GMT+06:00" name="shouldNavigateToorderListNextPageSection" finished-at="2025-07-23T16:19:09 GMT+06:00" duration-ms="9092" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToorderListNextPageSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:09 GMT+06:00" name="teardown" finished-at="2025-07-23T16:19:09 GMT+06:00" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:09 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:19:17 GMT+06:00" duration-ms="7564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="testSelectAllEntriesOption()[pri:2, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:17 GMT+06:00" name="testSelectAllEntriesOption" finished-at="2025-07-23T16:19:27 GMT+06:00" duration-ms="10609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSelectAllEntriesOption -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:27 GMT+06:00" name="teardown" finished-at="2025-07-23T16:19:28 GMT+06:00" duration-ms="283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:28 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:19:35 GMT+06:00" duration-ms="6870" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="testGoToPage2()[pri:3, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:35 GMT+06:00" name="testGoToPage2" finished-at="2025-07-23T16:19:43 GMT+06:00" duration-ms="8789" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToPage2 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:43 GMT+06:00" name="teardown" finished-at="2025-07-23T16:19:44 GMT+06:00" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:44 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:19:50 GMT+06:00" duration-ms="6588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateTosearchSection()[pri:4, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:50 GMT+06:00" name="shouldNavigateTosearchSection" finished-at="2025-07-23T16:19:58 GMT+06:00" duration-ms="8159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateTosearchSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:58 GMT+06:00" name="teardown" finished-at="2025-07-23T16:19:59 GMT+06:00" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:19:59 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:20:05 GMT+06:00" duration-ms="6168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToeditProfileAndUpdatePage()[pri:5, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:05 GMT+06:00" name="shouldNavigateToeditProfileAndUpdatePage" finished-at="2025-07-23T16:20:14 GMT+06:00" duration-ms="8905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToeditProfileAndUpdatePage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:14 GMT+06:00" name="teardown" finished-at="2025-07-23T16:20:14 GMT+06:00" duration-ms="299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:14 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:20:20 GMT+06:00" duration-ms="6422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToUpdatePasswordPage()[pri:6, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:20 GMT+06:00" name="shouldNavigateToUpdatePasswordPage" finished-at="2025-07-23T16:20:30 GMT+06:00" duration-ms="9563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToUpdatePasswordPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:30 GMT+06:00" name="teardown" finished-at="2025-07-23T16:20:30 GMT+06:00" duration-ms="271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:30 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:20:36 GMT+06:00" duration-ms="6144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToChatPage()[pri:7, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:36 GMT+06:00" name="shouldNavigateToChatPage" finished-at="2025-07-23T16:20:52 GMT+06:00" duration-ms="15236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToChatPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:52 GMT+06:00" name="teardown" finished-at="2025-07-23T16:20:52 GMT+06:00" duration-ms="304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:52 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:20:58 GMT+06:00" duration-ms="6484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldFailIfImageFieldNameMissing()[pri:8, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:20:58 GMT+06:00" name="shouldFailIfImageFieldNameMissing" finished-at="2025-07-23T16:21:14 GMT+06:00" duration-ms="15506" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
+              <![CDATA['Image' field is missing or not visible. expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
-at AllPagesForSeller.ProfileIconPage.verifyaddNewProducts(ProfileIconPage.java:350)
-at TestCaseForSellerPage.TestCaseForProfileIconPage.shouldAddNewProductPage(TestCaseForProfileIconPage.java:210)
+              <![CDATA[java.lang.AssertionError: 'Image' field is missing or not visible. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at TestCaseForSellerPage.TestCaseForProfileIconPage.shouldFailIfImageFieldNameMissing(TestCaseForProfileIconPage.java:165)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -57,15 +358,302 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- shouldAddNewProductPage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7d0b7e3c]" started-at="2025-07-22T14:52:34 GMT+06:00" name="teardown" finished-at="2025-07-22T14:52:35 GMT+06:00" duration-ms="248" status="PASS">
+        </test-method> <!-- shouldFailIfImageFieldNameMissing -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:21:14 GMT+06:00" name="teardown" finished-at="2025-07-23T16:21:15 GMT+06:00" duration-ms="349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:21:15 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:21:21 GMT+06:00" duration-ms="6620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToViewOrderListAndSearchSection()[pri:9, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:21:21 GMT+06:00" name="shouldNavigateToViewOrderListAndSearchSection" finished-at="2025-07-23T16:21:30 GMT+06:00" duration-ms="8307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToViewOrderListAndSearchSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:21:30 GMT+06:00" name="teardown" finished-at="2025-07-23T16:21:30 GMT+06:00" duration-ms="364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:21:30 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:21:36 GMT+06:00" duration-ms="6268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldEditAndUpdateProductName()[pri:10, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:21:36 GMT+06:00" name="shouldEditAndUpdateProductName" finished-at="2025-07-23T16:21:56 GMT+06:00" duration-ms="19417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldEditAndUpdateProductName -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:21:56 GMT+06:00" name="teardown" finished-at="2025-07-23T16:21:56 GMT+06:00" duration-ms="387" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:21:56 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:22:02 GMT+06:00" duration-ms="6431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldVerifyAddNewProductsFormFillup()[pri:11, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:22:02 GMT+06:00" name="shouldVerifyAddNewProductsFormFillup" finished-at="2025-07-23T16:22:14 GMT+06:00" duration-ms="11436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldVerifyAddNewProductsFormFillup -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:22:14 GMT+06:00" name="teardown" finished-at="2025-07-23T16:22:14 GMT+06:00" duration-ms="375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:22:14 GMT+06:00" name="browserSetup" finished-at="2025-07-23T16:22:21 GMT+06:00" duration-ms="6330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="shouldNavigateToaddProductwithoutdataSection()[pri:12, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:22:21 GMT+06:00" name="shouldNavigateToaddProductwithoutdataSection" finished-at="2025-07-23T16:22:37 GMT+06:00" duration-ms="16217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNavigateToaddProductwithoutdataSection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCaseForSellerPage.TestCaseForProfileIconPage@7188af83]" started-at="2025-07-23T16:22:37 GMT+06:00" name="teardown" finished-at="2025-07-23T16:22:37 GMT+06:00" duration-ms="331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- TestCaseForSellerPage.TestCaseForProfileIconPage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="TestCaseForCommonPage.TestCaseForSignUpPage">
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForSignUpPage@5ddeb7cb]" started-at="2025-07-23T16:14:55 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:14:59 GMT+06:00" duration-ms="4486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyAllFormFieldsFillUp()[pri:0, instance:TestCaseForCommonPage.TestCaseForSignUpPage@5ddeb7cb]" started-at="2025-07-23T16:14:59 GMT+06:00" name="verifyAllFormFieldsFillUp" finished-at="2025-07-23T16:15:04 GMT+06:00" duration-ms="4627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAllFormFieldsFillUp -->
+        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForSignUpPage@5ddeb7cb]" started-at="2025-07-23T16:15:04 GMT+06:00" name="tearDownBrowser" finished-at="2025-07-23T16:15:04 GMT+06:00" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForSignUpPage@5ddeb7cb]" started-at="2025-07-23T16:15:04 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:15:09 GMT+06:00" duration-ms="4651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateBackToLoginPage()[pri:1, instance:TestCaseForCommonPage.TestCaseForSignUpPage@5ddeb7cb]" started-at="2025-07-23T16:15:09 GMT+06:00" name="verifyNavigateBackToLoginPage" finished-at="2025-07-23T16:15:12 GMT+06:00" duration-ms="3089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateBackToLoginPage -->
+        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:TestCaseForCommonPage.TestCaseForSignUpPage@5ddeb7cb]" started-at="2025-07-23T16:15:12 GMT+06:00" name="tearDownBrowser" finished-at="2025-07-23T16:15:12 GMT+06:00" duration-ms="505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+      </class> <!-- TestCaseForCommonPage.TestCaseForSignUpPage -->
+      <class name="TestCasesForDashboard.TestCaseForDashboardPage">
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:12 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:13:18 GMT+06:00" duration-ms="5699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToDashboardPage()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:18 GMT+06:00" name="verifyNavigateToDashboardPage" finished-at="2025-07-23T16:13:18 GMT+06:00" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToDashboardPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:18 GMT+06:00" name="teardown" finished-at="2025-07-23T16:13:18 GMT+06:00" duration-ms="321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:18 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:13:23 GMT+06:00" duration-ms="5081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToCategories()[pri:1, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:23 GMT+06:00" name="verifyNavigateToCategories" finished-at="2025-07-23T16:13:23 GMT+06:00" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToCategories -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:23 GMT+06:00" name="teardown" finished-at="2025-07-23T16:13:24 GMT+06:00" duration-ms="326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:24 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:13:28 GMT+06:00" duration-ms="4604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToExploreCoursePage()[pri:2, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:28 GMT+06:00" name="verifyNavigateToExploreCoursePage" finished-at="2025-07-23T16:13:28 GMT+06:00" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToExploreCoursePage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:28 GMT+06:00" name="teardown" finished-at="2025-07-23T16:13:28 GMT+06:00" duration-ms="170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:28 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:13:29 GMT+06:00" duration-ms="998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToShopNowPage()[pri:3, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:29 GMT+06:00" name="verifyNavigateToShopNowPage" finished-at="2025-07-23T16:13:34 GMT+06:00" duration-ms="5066" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToShopNowPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:34 GMT+06:00" name="teardown" finished-at="2025-07-23T16:13:35 GMT+06:00" duration-ms="333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:35 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:13:39 GMT+06:00" duration-ms="4579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToContactUsPage()[pri:4, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:39 GMT+06:00" name="verifyNavigateToContactUsPage" finished-at="2025-07-23T16:13:40 GMT+06:00" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToContactUsPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:40 GMT+06:00" name="teardown" finished-at="2025-07-23T16:13:40 GMT+06:00" duration-ms="352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:40 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:13:44 GMT+06:00" duration-ms="4465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToExploreCoursePageAgain()[pri:6, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:44 GMT+06:00" name="verifyNavigateToExploreCoursePageAgain" finished-at="2025-07-23T16:13:45 GMT+06:00" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToExploreCoursePageAgain -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:45 GMT+06:00" name="teardown" finished-at="2025-07-23T16:13:45 GMT+06:00" duration-ms="466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:45 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:13:50 GMT+06:00" duration-ms="4561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToCareerAndPlacementPage()[pri:7, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:50 GMT+06:00" name="verifyNavigateToCareerAndPlacementPage" finished-at="2025-07-23T16:13:52 GMT+06:00" duration-ms="2443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToCareerAndPlacementPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:52 GMT+06:00" name="teardown" finished-at="2025-07-23T16:13:52 GMT+06:00" duration-ms="246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:52 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:13:57 GMT+06:00" duration-ms="4603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToEventPage()[pri:8, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:57 GMT+06:00" name="verifyNavigateToEventPage" finished-at="2025-07-23T16:13:59 GMT+06:00" duration-ms="2390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToEventPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:13:59 GMT+06:00" name="teardown" finished-at="2025-07-23T16:14:00 GMT+06:00" duration-ms="362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:00 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:14:04 GMT+06:00" duration-ms="4637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToBlogs()[pri:9, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:04 GMT+06:00" name="verifyNavigateToBlogs" finished-at="2025-07-23T16:14:08 GMT+06:00" duration-ms="3997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToBlogs -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:08 GMT+06:00" name="teardown" finished-at="2025-07-23T16:14:08 GMT+06:00" duration-ms="235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:08 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:14:13 GMT+06:00" duration-ms="4449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToResourceLibrary()[pri:10, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:13 GMT+06:00" name="verifyNavigateToResourceLibrary" finished-at="2025-07-23T16:14:14 GMT+06:00" duration-ms="1314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToResourceLibrary -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:14 GMT+06:00" name="teardown" finished-at="2025-07-23T16:14:15 GMT+06:00" duration-ms="274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:15 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:14:23 GMT+06:00" duration-ms="8286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToSuccessStoriesPage()[pri:11, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:23 GMT+06:00" name="verifyNavigateToSuccessStoriesPage" finished-at="2025-07-23T16:14:26 GMT+06:00" duration-ms="3535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToSuccessStoriesPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:26 GMT+06:00" name="teardown" finished-at="2025-07-23T16:14:27 GMT+06:00" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:27 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:14:32 GMT+06:00" duration-ms="5494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToChallengesPage()[pri:12, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:32 GMT+06:00" name="verifyNavigateToChallengesPage" finished-at="2025-07-23T16:14:33 GMT+06:00" duration-ms="1283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToChallengesPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:33 GMT+06:00" name="teardown" finished-at="2025-07-23T16:14:34 GMT+06:00" duration-ms="258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:34 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:14:38 GMT+06:00" duration-ms="4608" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyNavigateToLatestNews()[pri:13, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:38 GMT+06:00" name="verifyNavigateToLatestNews" finished-at="2025-07-23T16:14:47 GMT+06:00" duration-ms="8293" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Latest News heading mismatch expected [Latest News] but found [Something went wrong. Please reload]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Latest News heading mismatch expected [Latest News] but found [Something went wrong. Please reload]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at TestCasesForDashboard.TestCaseForDashboardPage.verifyNavigateToLatestNews(TestCaseForDashboardPage.java:133)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigateToLatestNews -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:47 GMT+06:00" name="teardown" finished-at="2025-07-23T16:14:47 GMT+06:00" duration-ms="296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:47 GMT+06:00" name="setupBrowser" finished-at="2025-07-23T16:14:52 GMT+06:00" duration-ms="4691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="verifyLoginFunctionality()[pri:14, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:52 GMT+06:00" name="verifyLoginFunctionality" finished-at="2025-07-23T16:14:54 GMT+06:00" duration-ms="2308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFunctionality -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCasesForDashboard.TestCaseForDashboardPage@15043a2f]" started-at="2025-07-23T16:14:54 GMT+06:00" name="teardown" finished-at="2025-07-23T16:14:55 GMT+06:00" duration-ms="385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCasesForDashboard.TestCaseForDashboardPage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

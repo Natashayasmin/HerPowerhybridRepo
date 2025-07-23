@@ -364,16 +364,20 @@ private WebElement productNameNewField;
 		    return this;
 		}
 	
-	public ProfileIconPage verifyaddNewProducts() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.elementToBeClickable(profileIconbtn)).click();
-		wait.until(ExpectedConditions.elementToBeClickable(addNewProductbtn)).click();
-		wait.until(ExpectedConditions.visibilityOf(publishBtn));
-		wait.until(ExpectedConditions.elementToBeClickable(publishBtn)).click();
-		wait.until(ExpectedConditions.urlContains("/shop-now/seller/dashboard/add-product"));
-		
-	    return this;
-		
+	public ProfileIconPage verifyaddNewProductswithoutMandatory() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	    
+	    wait.until(ExpectedConditions.elementToBeClickable(profileIconbtn)).click();
+	    wait.until(ExpectedConditions.elementToBeClickable(addNewProductbtn)).click();
+	    
+	    wait.until(ExpectedConditions.visibilityOf(publishBtn));
+	    wait.until(ExpectedConditions.elementToBeClickable(publishBtn)).click();
+
+	    // Wait for the validation message (example xpath, update to match actual DOM)
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(
+	        By.xpath("//p[normalize-space()='Product name is required']")));
+
+	    return this; // returning the same page
 	}
 }
 
