@@ -85,7 +85,35 @@ public class TestCaseForExploreCoursePage {
 		        System.out.println("✅ Navigation to Blended Course Page successful. URL: " + driver.getCurrentUrl());
 		    }
 		 
+		 @Test(priority = 4)
+		    public void testNavigateTomyCoursesPage() {
+		        explorecoursepage.navigateTomyCoursesPage();
+
+		        Assert.assertTrue(explorecoursepage.verifyOnPage(),
+		            "❌ Navigation failed! Expected URL to contain: /en/course/student-courses");
+
+		        System.out.println("✅ Navigation to My Courses Page successful. URL: " + driver.getCurrentUrl());
+		    }
 		 
+		 @Test(priority = 5)
+		    public void testNavigateTostudenProfilePage() {
+		        explorecoursepage.navigateTostudentProfilePage();
+
+		        Assert.assertTrue(explorecoursepage.verifyOnPage(),
+		            "❌ Navigation failed! Expected URL to contain: /en/course/student-profile");
+
+		        System.out.println("✅ Navigation to Student Profile Page successful. URL: " + driver.getCurrentUrl());
+		    }
+		 
+		 @Test(priority = 6)
+		    public void testNavigateToprofileEditPage() {
+		        explorecoursepage.navigateToprofileEditPage();
+
+		        Assert.assertTrue(explorecoursepage.verifyOnPage(),
+		            "❌ Navigation failed! Expected URL to contain: /en/course/edit-student");
+
+		        System.out.println("✅ Navigation to Profile Edit Page successful. URL: " + driver.getCurrentUrl());
+		    }
 }
 	
 }
