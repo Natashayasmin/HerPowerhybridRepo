@@ -54,5 +54,38 @@ public class TestCaseForExploreCoursePage {
 
 		    System.out.println("✅ On the correct Explore Course Page.");
 		}
+		
+		 @Test(priority = 1)
+		    public void testNavigateToOnlineCoursePage() {
+		        explorecoursepage.navigateToOnlinecoursePage();
+
+		        Assert.assertTrue(explorecoursepage.verifyOnPage(),
+		            "❌ Navigation failed! Expected URL to contain: /en/course/online-courses");
+
+		        System.out.println("✅ Navigation to Online Course Page successful. URL: " + driver.getCurrentUrl());
+		    }
+		 
+		 @Test(priority = 2)
+		    public void testNavigateToPhysicalCoursePage() {
+		        explorecoursepage.navigateToPhysicalCoursePage();
+
+		        Assert.assertTrue(explorecoursepage.verifyOnPhysicalCoursePage(),
+		            "❌ Navigation failed! Expected URL to contain: /en/course/physical-courses");
+
+		        System.out.println("✅ Navigation to Physical Course Page successful. URL: " + driver.getCurrentUrl());
+		    }
+		 
+		 @Test(priority = 3)
+		    public void testNavigateToblendedCoursePage() {
+		        explorecoursepage.navigateToBlendedCoursePage();
+
+		        Assert.assertTrue(explorecoursepage.verifyOnblendedCoursePage(),
+		            "❌ Navigation failed! Expected URL to contain: /en/course/blended-courses");
+
+		        System.out.println("✅ Navigation to Blended Course Page successful. URL: " + driver.getCurrentUrl());
+		    }
+		 
+		 
 }
+	
 }
