@@ -203,7 +203,7 @@ public class TestCaseForProfileIconPage extends BaseClassOne  {
 	public void shouldVerifyAddNewProductsFormFillup() {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-	    // ✅ Fill the form with properties data
+	    // Fill the form using properties
 	    profileiconpage.verifyaddNewProductsformfillup(
 	        DataPropForHerPower.getProperty("productName"),
 	        DataPropForHerPower.getProperty("brandModel"),
@@ -213,7 +213,7 @@ public class TestCaseForProfileIconPage extends BaseClassOne  {
 	        DataPropForHerPower.getProperty("variantName"),
 	        DataPropForHerPower.getProperty("oldPrice"),
 	        DataPropForHerPower.getProperty("newPrice"),
-	       // DataPropForHerPower.getProperty("categoryName"), // e.g., "Footwear"
+	        DataPropForHerPower.getProperty("categoryName"),
 	        DataPropForHerPower.getProperty("stockCount"),
 	        DataPropForHerPower.getProperty("descfield2")
 	    );
@@ -221,29 +221,25 @@ public class TestCaseForProfileIconPage extends BaseClassOne  {
 	    String expectedCategory = DataPropForHerPower.getProperty("categoryName");
 	    String expectedFragment = "/shop-now/seller/dashboard/add-product";
 
-	    System.out.println("🔍 Verifying category selection: '" + expectedCategory + "'");
-	    System.out.println("📍 Expecting redirect to URL containing: " + expectedFragment);
+	    System.out.println("🔍 Verifying category: '" + expectedCategory + "'");
+	    System.out.println("📍 Expecting URL to contain: " + expectedFragment);
 
 	    try {
-	        // ✅ Step 1: Check for expected redirect URL
 	        wait.until(ExpectedConditions.urlContains(expectedFragment));
 	        String actualUrl = driver.getCurrentUrl();
-
 	        Assert.assertTrue(actualUrl.contains(expectedFragment),
-	            "❌ Redirect failed. Expected fragment: '" + expectedFragment + "', but URL was: " + actualUrl);
-	        System.out.println("✅ Redirect success. Current URL: " + actualUrl);
-
+	            "❌ URL mismatch. Expected fragment: '" + expectedFragment + "', but was: " + actualUrl);
+	        System.out.println("✅ URL verified: " + actualUrl);
 	    } catch (TimeoutException e) {
-	        // ✅ Step 2: Fallback — look for "Product added" toast
+	        // Check toast message fallback
 	        try {
 	            WebElement toastMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(
 	                By.xpath("//*[contains(text(), 'Product added')]")
 	            ));
-	            Assert.assertTrue(toastMsg.isDisplayed(), "❌ Toast not displayed.");
-	            System.out.println("✅ Product added confirmed via toast message.");
-
+	            Assert.assertTrue(toastMsg.isDisplayed(), "❌ Toast not shown.");
+	            System.out.println("✅ Product added confirmed via toast.");
 	        } catch (TimeoutException toastFail) {
-	            throw new AssertionError("❌ Neither redirect nor toast message detected. Product may not have been added.");
+	            throw new AssertionError("❌ Neither redirect nor toast detected. Product addition may have failed.");
 	        }
 	    }
 	}
