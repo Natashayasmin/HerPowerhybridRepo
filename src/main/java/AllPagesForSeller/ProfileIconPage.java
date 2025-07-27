@@ -308,11 +308,12 @@ private WebElement productNameNewField;
 		    String variantName,
 		    String oldPrice,
 		    String newPrice,
-		 //   String categoryName,
+		    String categoryName,
 		    String stockCount,
 		    String descfield2
 		) {
 		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
 		    // Navigate to "Add New Product"
 		    wait.until(ExpectedConditions.elementToBeClickable(profileIconbtn)).click();
 		    wait.until(ExpectedConditions.elementToBeClickable(addNewProductbtn)).click();
@@ -322,43 +323,33 @@ private WebElement productNameNewField;
 		    brandModelField.sendKeys(brandModel);
 		    brandNameField.sendKeys(brandName);
 
-//		    // --- CUSTOM DROPDOWN HANDLING START ---
-//		    // 1. Open the dropdown
-//		    WebElement dropdownButton = wait.until(ExpectedConditions.elementToBeClickable(
-//		        By.xpath("//button[contains(@class,'h-10') and .//span[text()='Product Category']]")
-//		    ));
-//		    dropdownButton.click();
-//
-//		    // 2. Wait for dropdown options to be visible
-//		    wait.until(ExpectedConditions.visibilityOfElementLocated(
-//		        By.xpath("//ul[contains(@class,'absolute') and contains(@class,'z-')]")
-//		    ));
-//
-//		    // 3. Select the option dynamically
-//		    By optionLocator = By.xpath("//li[normalize-space(text())='" + categoryName + "']");
-//		    WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(optionLocator));
-//		    js.executeScript("arguments[0].scrollIntoView(true);", option);
-//		    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-//
-//		    // --- CUSTOM DROPDOWN HANDLING END ---
-
+		 // --- SELECT CATEGORY USING NATIVE <select> ---
+		    try {
+		        WebElement nativeSelect = wait.until(ExpectedConditions.presenceOfElementLocated(
+		            By.name("category_pid") // Confirm this name matches exactly
+		        ));
+		        Select categoryDropdown = new Select(nativeSelect);
+		        categoryDropdown.selectByVisibleText(categoryName);
+		        System.out.println("✅ Native category selected: " + categoryName);
+		    } catch (TimeoutException | NoSuchElementException e) {
+		        throw new RuntimeException("❌ Failed to select category: " + categoryName, e);
+		    }
 		    // Image upload
 		    uploadLabel.click();
 		    fileInput.sendKeys(imageFile);
-		    
-		    descFieldName.sendKeys(description);
 
-		    // Pricing and variant
+		    // Fill remaining fields
+		    descFieldName.sendKeys(description);
 		    variant1Field.sendKeys(variantName);
 		    oldPriceField.sendKeys(oldPrice);
 		    newPriceField.sendKeys(newPrice);
 		    stockField.sendKeys(stockCount);
 		    descField2.sendKeys(descfield2);
 
-		    // Submit
+		    // Submit the form
 		    wait.until(ExpectedConditions.elementToBeClickable(publishBtn)).click();
 
-		    // Wait for success confirmation
+		    // Confirm success
 		    wait.until(ExpectedConditions.urlContains("/shop-now/seller/dashboard/add-product"));
 
 		    return this;
