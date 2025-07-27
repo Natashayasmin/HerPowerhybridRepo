@@ -199,7 +199,28 @@ public class TestCaseForProfileIconPage extends BaseClassOne  {
 
 	    System.out.println(" Product Updated successfully: " + ProductNameUpdate);
 	}
-	@Test(priority = 11)
+	
+	@Test(priority=11)
+	public void testNavigateToDeleteOption() {
+	    // 🔧 Initialize page object
+	    ProfileIconPage profileIconPage = new ProfileIconPage(driver);
+
+	    // 🧭 Trigger the navigation method
+	    profileIconPage.navigateTodeleteOption();
+
+	    // 🌐 Assert that user is redirected to the expected URL
+	    String expectedUrlSubstring = "/shop-now/seller/dashboard/all-product";
+	    String actualUrl = driver.getCurrentUrl();
+
+	    Assert.assertTrue(
+	        actualUrl.contains(expectedUrlSubstring),
+	        "URL should contain expected path after navigating to delete option"
+	    );
+	}
+	
+	
+	
+	@Test(priority = 12)
 	public void shouldVerifyAddNewProductsFormFillup() {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
@@ -244,7 +265,7 @@ public class TestCaseForProfileIconPage extends BaseClassOne  {
 	    }
 	}
 	
-	@Test(priority = 12)
+	@Test(priority = 13)
 	public void shouldNavigateToaddProductwithoutdataSection() {
 	    profileiconpage.verifyaddNewProductswithoutMandatory();
 
