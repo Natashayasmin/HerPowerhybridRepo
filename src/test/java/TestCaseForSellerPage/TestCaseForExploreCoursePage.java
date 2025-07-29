@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestCaseForExploreCoursePage {
 	
-	public class TestCaseForProfileIconPage extends BaseClassOne  {
+	public class TestCaseForexploreCoursePage extends BaseClassOne  {
 
 		public  WebDriver driver;
 		DashboardPageHerPower dashboardPage;
@@ -96,7 +96,7 @@ public class TestCaseForExploreCoursePage {
 		    }
 		 
 		 @Test(priority = 5)
-		    public void testNavigateTostudenProfilePage() {
+		    public void testNavigateTostudentProfilePage() {
 		        explorecoursepage.navigateTostudentProfilePage();
 
 		        Assert.assertTrue(explorecoursepage.verifyOnPage(),
@@ -106,14 +106,84 @@ public class TestCaseForExploreCoursePage {
 		    }
 		 
 		 @Test(priority = 6)
-		    public void testNavigateToprofileEditPage() {
-		        explorecoursepage.navigateToprofileEditPage();
+		    public void testNavigateTostudentprofileEditPage() {
+		        explorecoursepage.navigateTostudentprofileEditPage();
 
 		        Assert.assertTrue(explorecoursepage.verifyOnPage(),
 		            "❌ Navigation failed! Expected URL to contain: /en/course/edit-student");
 
 		        System.out.println("✅ Navigation to Profile Edit Page successful. URL: " + driver.getCurrentUrl());
 		    }
-}
+		 
+		 @Test(priority = 7)
+		 public void verifyToCourseRegistrationCancel() {
+		     exploreCoursePage exploreCoursePage = new exploreCoursePage(driver);
+		     
+		     exploreCoursePage.verifytheRegistrationCourseCancel();
+
+		     Assert.assertTrue(exploreCoursePage.verifyOnPage(),
+		         "❌ Navigation failed! Expected URL to contain: /en/course/courses/C250400000132");
+
+		     System.out.println("✅ Navigation to Registration Course Cancel successful. URL: " + driver.getCurrentUrl());
+		 }
+		 
+		 @Test(priority = 8)
+		 public void verifyToCourseRegistrationConfirmation() {
+		     exploreCoursePage exploreCoursePage = new exploreCoursePage(driver);
+		     
+		     exploreCoursePage.verifytheRegistrationCourseConfirm();
+
+		     Assert.assertTrue(exploreCoursePage.verifyOnPage(),
+		         "❌ Navigation failed! Expected URL to contain: /en/course/courses/C250400000132");
+
+		     System.out.println("✅ Successfully registered the Course! URL: " + driver.getCurrentUrl());
+		 }
+		 
+		 @Test(priority= 9)
+		    public void testVerifyLessonNameDisplayed() {
+		        // Define expected lesson name
+		        String expectedLessonName = "QA Part 11";
+
+		        // Instantiate page object
+		        exploreCoursePage coursePage = new exploreCoursePage(driver);
+
+		        // Run method and verify lesson name
+		        coursePage.verifyViewCourse(expectedLessonName);
+		        
+		        // You can add extra assertions here if needed
+		        // Example: Check URL after navigation
+		        Assert.assertTrue(driver.getCurrentUrl().contains("/en/course/video/C250300000110"),
+		            "❌ URL does not match expected course video page.");
+		        
+		        System.out.println("✅ Test completed: Lesson name and page verified successfully.");
+		    }
+		 
+		 
+		  @Test(priority = 10)
+		    public void testStudentInfoPageNavigation() {
+		        // 🔹 Expected title of the Student Information section
+		        String expectedProfileTitle = "Student Information";
+
+		        // 🔹 Instantiate the page object
+		        exploreCoursePage coursePage = new exploreCoursePage(driver);
+
+		        // 🔹 Call the method and perform internal validations
+		        coursePage.navigateTostudentInfoPage(expectedProfileTitle);
+
+		        // 🔹 Final URL validation after navigation
+		        String currentUrl = driver.getCurrentUrl();
+		        Assert.assertTrue(currentUrl.contains("/en/course/student-profile"),
+		            "❌ Unexpected URL after navigation: " + currentUrl);
+
+		        System.out.println("✅ Test passed: Student Information section and URL displayed successfully.");
+		    }
+		}
+		}
 	
-}
+
+
+	
+	
+
+	
+
