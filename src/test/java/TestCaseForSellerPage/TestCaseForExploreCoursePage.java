@@ -1,10 +1,20 @@
 package TestCaseForSellerPage;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import AllPagesForSeller.HomePageForSeller;
@@ -23,22 +33,32 @@ public class TestCaseForExploreCoursePage {
 		LoginPage loginPage;
 		HomePageForSeller homePage;
 		exploreCoursePage explorecoursepage;
+		
+		 @Parameters("browser")
+		    @BeforeMethod
+		    public void browserSetup(@Optional("chrome") String browser) {
+		        loadPropertiesFileOfHerPower();
 
-		@BeforeMethod
-		public void browserSetup() {
-			loadPropertiesFileOfHerPower();
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-			driver.get(propForHerPower.getProperty("url"));
-			driver.manage().window().maximize();
-			loginPage = new LoginPage(driver);
-			dashboardPage = loginPage.loginAsSeller(
-					propForHerPower.getProperty("validEmailforSeller"),
-					propForHerPower.getProperty("validPassword"));
-			homePage = new HomePageForSeller(driver);
-			explorecoursepage =new exploreCoursePage(driver);
+		        if (browser.equalsIgnoreCase("chrome")) {
+		            WebDriverManager.chromedriver().setup();
+		            driver = new ChromeDriver();
+		        } else if (browser.equalsIgnoreCase("edge")) {
+		            WebDriverManager.edgedriver().setup();
+		            driver = new EdgeDriver();
+		        } else {
+		            throw new IllegalArgumentException("Unsupported browser: " + browser);
+		        }
 
-		}
+		        driver.manage().window().maximize();
+		        driver.get(propForHerPower.getProperty("url"));
+
+		        loginPage = new LoginPage(driver);
+		        dashboardPage = loginPage.loginAsSeller(
+		                propForHerPower.getProperty("validEmailforSeller"),
+		                propForHerPower.getProperty("validPassword"));
+		        homePage = new HomePageForSeller(driver);
+		        explorecoursepage = new exploreCoursePage(driver);
+		    }
 
 		@AfterMethod
 		public void teardown() {
@@ -177,8 +197,65 @@ public class TestCaseForExploreCoursePage {
 
 		        System.out.println("✅ Test passed: Student Information section and URL displayed successfully.");
 		    }
-		}
-		}
+		  
+		 
+		  @Test(priority = 11)
+		  public void shouldVerifyStudentInfoUpdated() {
+		      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+		      exploreCoursePage explorePage = new exploreCoursePage(driver);
+
+		      explorePage.verifyStudentEditAndUpdate(
+		          DataPropForHerPower.getProperty("Name"),
+		          DataPropForHerPower.getProperty("Degree"),
+		          DataPropForHerPower.getProperty("Department"),
+		          DataPropForHerPower.getProperty("PassingYear"),
+		          DataPropForHerPower.getProperty("GPA"),
+		          DataPropForHerPower.getProperty("OutOfgpa"),
+
+		          DataPropForHerPower.getProperty("Degree1"),
+		          DataPropForHerPower.getProperty("Department1"),
+		          DataPropForHerPower.getProperty("PassingYear1"),
+		          DataPropForHerPower.getProperty("GPA1"),
+		          DataPropForHerPower.getProperty("OutOfgpa1"),
+
+		          DataPropForHerPower.getProperty("Degree2"),
+		          DataPropForHerPower.getProperty("Department2"),
+		          DataPropForHerPower.getProperty("PassingYear2"),
+		          DataPropForHerPower.getProperty("GPA2"),
+		          DataPropForHerPower.getProperty("OutOfgpa2")
+		      );
+
+		      // Optional: Check for confirmation toast or URL
+		      try {
+		          String expectedFragment = DataPropForHerPower.getProperty("expectedUrlFragment");
+		          wait.until(ExpectedConditions.urlContains(expectedFragment));
+		          String actualUrl = driver.getCurrentUrl();
+		          Assert.assertTrue(actualUrl.contains(expectedFragment),
+		              "❌ URL mismatch. Expected fragment: '" + expectedFragment + "', but was: " + actualUrl);
+		          System.out.println("✅ URL verified: " + actualUrl);
+		      } catch (TimeoutException e) {
+		          try {
+		              WebElement toastMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		                  By.xpath("//*[contains(text(), 'Student information updated')]")
+		              ));
+		              Assert.assertTrue(toastMsg.isDisplayed(), "❌ Toast not shown.");
+		              System.out.println("✅ Confirmation via toast");
+		          } catch (TimeoutException toastFail) {
+		              throw new AssertionError("❌ Neither redirect nor toast confirmed update.");
+		          }
+		      }
+		  }
+		  }
+		  
+	}
+	
+	
+		
+		        
+		    
+		
+		
 	
 
 

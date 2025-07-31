@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -63,6 +64,70 @@ public class exploreCoursePage {
 
 	@FindBy(xpath="//p[normalize-space()='Student Information']")
 	private WebElement studentInformation;
+	
+    
+	//EditStudentPage
+	@FindBy(xpath="//*[name()='path' and contains(@d,'M402.6 83.')]")
+	private WebElement profileEdit;
+	
+	@FindBy(xpath="//input[@placeholder='Enter your full name here...']")
+	private WebElement FullNameField;
+	
+	@FindBy(xpath="//input[@placeholder='yyyy-mm-dd']")
+	private WebElement DOB;
+	
+	@FindBy(css="input[placeholder='Degree'][name='education_info.0.degree']")
+	private WebElement degreeField;
+	
+	@FindBy(css="input[placeholder='Group/Department'][name='education_info.0.group']")
+	private WebElement departField;
+	
+	@FindBy(css="input[placeholder='Passing Year'][name='education_info.0.passing_year']")
+	private WebElement passYearField;
+	
+	@FindBy(css="input[placeholder='GPA/CGPA'][name='education_info.0.result']")
+	private WebElement gpaField;
+	
+	@FindBy(xpath="//select[@name='education_info.0.gpa_cgpa_outof']")
+	private WebElement outOfGpaField;
+	
+	@FindBy(css="input[placeholder='Degree'][name='education_info.1.degree']")
+	private WebElement degreeField1;
+	
+	@FindBy(css="input[placeholder='Group/Department'][name='education_info.1.group']")
+	private WebElement departField1;
+	
+	@FindBy(css="input[placeholder='Passing Year'][name='education_info.1.passing_year']")
+	private WebElement passYearField1;
+	
+	@FindBy(css="input[placeholder='GPA/CGPA'][name='education_info.1.result']")
+	private WebElement gpaField1;
+	
+	@FindBy(xpath="//select[@name='education_info.1.gpa_cgpa_outof']")
+	private WebElement outOfGpaField1;
+	
+	@FindBy(css="input[placeholder='Degree'][name='education_info.2.degree']")
+	private WebElement degreeField2;
+	
+	@FindBy(css="input[placeholder='Group/Department'][name='education_info.2.group']")
+	private WebElement departField2;
+	
+	@FindBy(css="input[placeholder='Passing Year'][name='education_info.2.passing_year']")
+	private WebElement passYearField2;
+	
+	@FindBy(css="input[placeholder='GPA/CGPA'][name='education_info.2.result']")
+	private WebElement gpaField2;
+	
+	@FindBy(xpath="//body/div/div[@class='mt-24']/div/div/div/section[@class='container p-4']/main[@class='my-12']/form[@class='my-8']/div[@class='my-8']/div[1]")
+	private WebElement outOfGpaField2;
+	
+	@FindBy(xpath="//button[normalize-space()='Submit']")
+	private WebElement submitbtn;
+	
+	
+	
+	
+	
 
 
 
@@ -348,34 +413,167 @@ public class exploreCoursePage {
 
 		return this;
 	}
-	
-	  public exploreCoursePage navigateTostudentInfoPage(String profile) {
-	        // Navigate to Explore Course Page
-	        navigateToexploreCoursePage();
 
-	        // Click "My Courses"
-	        wait.until(ExpectedConditions.visibilityOf(myCoursesbtn));
-	        wait.until(ExpectedConditions.elementToBeClickable(myCoursesbtn)).click();
+	public exploreCoursePage navigateTostudentInfoPage(String profile) {
+		// Navigate to Explore Course Page
+		navigateToexploreCoursePage();
 
-	        // Click "Student Information"
-	        wait.until(ExpectedConditions.visibilityOf(studentInformation));
-	        wait.until(ExpectedConditions.elementToBeClickable(studentInformation)).click();
+		// Click "My Courses"
+		wait.until(ExpectedConditions.visibilityOf(myCoursesbtn));
+		wait.until(ExpectedConditions.elementToBeClickable(myCoursesbtn)).click();
 
-	        // Confirm URL navigation
-	        wait.until(ExpectedConditions.urlContains("/en/course/student-profile"));
+		// Click "Student Information"
+		wait.until(ExpectedConditions.visibilityOf(studentInformation));
+		wait.until(ExpectedConditions.elementToBeClickable(studentInformation)).click();
 
-	        // ✅ Validate the profile section name
-	        wait.until(ExpectedConditions.visibilityOf(studentInformation));
-	        Assert.assertTrue(studentInformation.isDisplayed(), "❌ Profile title is not displayed.");
-	        Assert.assertEquals(studentInformation.getText().trim(), profile, "❌ Profile title does not match expected value.");
+		// Confirm URL navigation
+		wait.until(ExpectedConditions.urlContains("/en/course/student-profile"));
 
-	        System.out.println("✅ Profile section is correctly displayed: " + studentInformation.getText());
+		// ✅ Validate the profile section name
+		wait.until(ExpectedConditions.visibilityOf(studentInformation));
+		Assert.assertTrue(studentInformation.isDisplayed(), "❌ Profile title is not displayed.");
+		Assert.assertEquals(studentInformation.getText().trim(), profile, "❌ Profile title does not match expected value.");
 
-	        return this;
-	    }
+		System.out.println("✅ Profile section is correctly displayed: " + studentInformation.getText());
 
-
+		return this;
 	}
+	
+	//For selecting outofgpa
+	public void selectGpaCgpaOutOf(String outOfGpaField) {
+	    try {
+	        WebElement gpaDropdown = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("gpaCgpaOutOf")));
+	        Select select = new Select(gpaDropdown);
+	        select.selectByVisibleText(outOfGpaField);
+	        System.out.println("✅ GPA/CGPA value selected: " + outOfGpaField);
+	    } catch (Exception e) {
+	        System.out.println("❌ Failed to select GPA/CGPA value: " + e.getMessage());
+	        throw new RuntimeException("❌ Failed to select GPA/CGPA value");
+	    }
+	}
+	
+	public void selectGpaCgpaOutOf1(String outOfGpaField1) {
+	    try {
+	        WebElement gpaDropdown = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("gpaCgpaOutOf")));
+	        Select select = new Select(gpaDropdown);
+	        select.selectByVisibleText(outOfGpaField1);
+	        System.out.println("✅ GPA/CGPA value selected: " + outOfGpaField1);
+	    } catch (Exception e) {
+	        System.out.println("❌ Failed to select GPA/CGPA value: " + e.getMessage());
+	        throw new RuntimeException("❌ Failed to select GPA/CGPA value");
+	    }
+	}
+	
+	public void selectGpaCgpaOutOf2(String outOfGpaField2) {
+	    try {
+	        WebElement gpaDropdown = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("gpaCgpaOutOf")));
+	        Select select = new Select(gpaDropdown);
+	        select.selectByVisibleText(outOfGpaField2);
+	        System.out.println("✅ GPA/CGPA value selected: " + outOfGpaField2);
+	    } catch (Exception e) {
+	        System.out.println("❌ Failed to select GPA/CGPA value: " + e.getMessage());
+	        throw new RuntimeException("❌ Failed to select GPA/CGPA value");
+	    }
+	}
+	
+
+
+	public exploreCoursePage verifyStudentEditAndUpdate(
+		    String Name, String Degree, String Department, String PassingYear, String GPA, String OutOfgpa,
+		    String Degree1, String Department1, String PassingYear1, String GPA1, String OutOfgpa1, 
+		    String Degree2, String Department2, String PassingYear2, String GPA2, String OutOfgpa2
+		) {
+		    // ✅ Step 1: Navigate to student edit form
+		    navigateToexploreCoursePage();
+
+		    wait.until(ExpectedConditions.elementToBeClickable(myCoursesbtn)).click();
+		    wait.until(ExpectedConditions.elementToBeClickable(studentInformation)).click();
+		    wait.until(ExpectedConditions.elementToBeClickable(profileEdit)).click();
+
+		    // ✅ Step 2: Enter full name
+		    wait.until(ExpectedConditions.visibilityOf(FullNameField)).clear();
+		    FullNameField.sendKeys(Name);
+
+		    // ✅ Step 3: Enter DOB
+		    try {
+		        WebElement dobInput = wait.until(ExpectedConditions.elementToBeClickable(DOB));
+		        dobInput.clear();
+		        dobInput.sendKeys("12/31/1998");
+		        System.out.println("✅ DOB entered successfully");
+		    } catch (Exception e) {
+		        throw new RuntimeException("❌ Failed to input DOB: " + e.getMessage(), e);
+		    }
+
+		    // ✅ Step 4: Select GPA/CGPA Out Of
+		    try {
+		        selectGpaCgpaOutOf(OutOfgpa);
+		    } catch (Exception e) {
+		        throw new RuntimeException("❌ Failed to select GPA/CGPA value: " + e.getMessage(), e);
+		    }
+		    
+		 // ✅ Step 4: Select GPA/CGPA Out Of1
+		    try {
+		        selectGpaCgpaOutOf(OutOfgpa1);
+		    } catch (Exception e) {
+		        throw new RuntimeException("❌ Failed to select GPA/CGPA value: " + e.getMessage(), e);
+		    }
+		    
+		    // ✅ Step 4: Select GPA/CGPA Out Of2
+		    try {
+		        selectGpaCgpaOutOf(OutOfgpa2);
+		    } catch (Exception e) {
+		        throw new RuntimeException("❌ Failed to select GPA/CGPA value: " + e.getMessage(), e);
+		    }
+		    
+
+		    // ✅ Step 5: Fill academic fields
+		    try {
+		        wait.until(ExpectedConditions.visibilityOf(degreeField)).clear();
+		        degreeField.sendKeys(Degree);
+		        wait.until(ExpectedConditions.visibilityOf(departField)).clear();
+		        departField.sendKeys(Department);
+		        wait.until(ExpectedConditions.visibilityOf(passYearField)).clear();
+		        passYearField.sendKeys(PassingYear);
+		        wait.until(ExpectedConditions.visibilityOf(gpaField)).clear();
+		        gpaField.sendKeys(GPA);
+
+		        wait.until(ExpectedConditions.visibilityOf(degreeField1)).clear();
+		        degreeField1.sendKeys(Degree1);
+		        wait.until(ExpectedConditions.visibilityOf(departField1)).clear();
+		        departField1.sendKeys(Department1);
+		        wait.until(ExpectedConditions.visibilityOf(passYearField1)).clear();
+		        passYearField1.sendKeys(PassingYear1);
+		        wait.until(ExpectedConditions.visibilityOf(gpaField1)).clear();
+		        gpaField1.sendKeys(GPA1);
+
+		        wait.until(ExpectedConditions.visibilityOf(degreeField2)).clear();
+		        degreeField2.sendKeys(Degree2);
+		        wait.until(ExpectedConditions.visibilityOf(departField2)).clear();
+		        departField2.sendKeys(Department2);
+		        wait.until(ExpectedConditions.visibilityOf(passYearField2)).clear();
+		        passYearField2.sendKeys(PassingYear2);
+		        wait.until(ExpectedConditions.visibilityOf(gpaField2)).clear();
+		        gpaField2.sendKeys(GPA2);
+
+		        System.out.println("✅ Academic fields filled in successfully");
+		    } catch (Exception e) {
+		        throw new RuntimeException("❌ Failed to fill academic info fields: " + e.getMessage(), e);
+		    }
+
+		    // ✅ Step 6: Submit and Confirm
+		    try {
+		        wait.until(ExpectedConditions.elementToBeClickable(submitbtn)).click();
+		        wait.until(ExpectedConditions.urlContains("/en/course/edit-student"));
+		        System.out.println("✅ Student information updated and URL confirmed");
+		    } catch (Exception e) {
+		        throw new RuntimeException("❌ Failed to submit or confirm student info update: " + e.getMessage(), e);
+		    }
+
+		    return this;
+		}
+
+
+}
 
 
 
