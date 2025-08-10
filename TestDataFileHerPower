@@ -44,7 +44,69 @@ oldPrice=250
 newPrice=550
 stockCount=1000
 descfield2=Testing2
-categoryName=Footwear
+categoryName=Life Style
+
+
+//EditStudentProfile
+
+Name=Natasha
+Degree=SQA
+Department=QA
+PassingYear=2014
+GPA=3
+OutOfgpa=5.00
+Degree1=SQAPro
+Department1=QA1
+PassingYear1=2016
+GPA1=2
+OutOfgpa1=5.00
+Degree2=SQAPro1
+Department2=QA2
+PassingYear2=2018
+GPA2=4
+OutOfgpa2=5.00
+expectedUrlFragment=/en/course/edit-student
+
+//CareerAndPlacement
+searchJobs=test
+
+//I am a provider
+companyName=ATI LIMITED
+desigName=SQA
+companyAddress=UTTARA
+companyType=IT
+companyWebsite=acx@gmail.com
+
+//Job seeker Form
+firstNameUpdate=Natasha Yasmin
+lastNameUpdate=Seller1
+emailUpdate=natashay580@gmail.com
+PhoneNumberUpdate=01722114455
+address=Dhaka
+areaName=Uttara
+areaName2=10no
+zipCode=1215
+degree=Engineer
+department=IT
+passYear=2001
+cgpa=3
+outOf=5
+titleExp=SQA
+experience=2
+organization=ATI LIMITED
+titleAchv=Tester
+documentFile=‪D:\Work\Screenshots\test.docx
+portfolio=QA tester
+imageFile=D:\Work\Screenshots\yellow flower.jfif
+
+
+
+
+
+
+
+
+    
 
 
 //SignUp page
